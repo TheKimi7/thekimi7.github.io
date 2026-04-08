@@ -1,0 +1,361 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* ──────────────────────────────────────────────
+   Design Tokens — Monochrome
+   ────────────────────────────────────────────── */
+
+@theme {
+  /* Typography */
+  --font-sans: 'Gilroy', system-ui, sans-serif;
+  --font-serif: 'Instrument Serif', Georgia, serif;
+  --font-mono: 'Overpass Mono', 'Menlo', monospace;
+
+  /* Accent — monochrome: black in light, white in dark */
+  --color-accent: #18181b;
+  --color-accent-light: #fafafa;
+  --color-accent-subtle: #f4f4f5;
+
+  /* Dark surfaces */
+  --color-surface-0: #09090b;
+  --color-surface-1: #131316;
+  --color-surface-2: #1c1c20;
+  --color-border: #27272a;
+  --color-border-subtle: #1e1e21;
+
+  /* Text */
+  --color-text-primary: #fafafa;
+  --color-text-secondary: #a1a1aa;
+  --color-text-tertiary: #71717a;
+
+  /* Light mode surfaces */
+  --color-light-bg: #ffffff;
+  --color-light-card: #f4f4f5;
+  --color-light-border: #d4d4d8;
+}
+
+/* ──────────────────────────────────────────────
+   Base
+   ────────────────────────────────────────────── */
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+::selection {
+  background: rgba(0, 0, 0, 0.12);
+}
+
+.dark ::selection {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #d4d4d8;
+  border-radius: 3px;
+}
+.dark ::-webkit-scrollbar-thumb {
+  background: #27272a;
+}
+
+/* ──────────────────────────────────────────────
+   Type Ramp
+   ────────────────────────────────────────────── */
+
+.type-display {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 3.5rem;
+  line-height: 1.1;
+  letter-spacing: -0.01em;
+  font-weight: 400;
+}
+
+@media (min-width: 768px) {
+  .type-display {
+    font-size: 4.25rem;
+  }
+}
+
+.type-h2 {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 1.75rem;
+  line-height: 1.25;
+  letter-spacing: -0.005em;
+  font-weight: 400;
+}
+
+@media (min-width: 768px) {
+  .type-h2 {
+    font-size: 2.5rem;
+  }
+}
+
+.type-h3 {
+  font-size: 1.25rem;
+  line-height: 1.3;
+  font-weight: 600;
+}
+
+.type-body {
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+.type-body-lg {
+  font-size: 1.125rem;
+  line-height: 1.7;
+}
+
+.type-sm {
+  font-size: 0.875rem;
+  line-height: 1.6;
+}
+
+.type-xs {
+  font-size: 0.75rem;
+  line-height: 1.5;
+}
+
+.type-mono {
+  font-family: 'Overpass Mono', 'Menlo', monospace;
+}
+
+/* ──────────────────────────────────────────────
+   Components
+   ────────────────────────────────────────────── */
+
+.fade-section {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.fade-section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Card */
+.card {
+  background: var(--color-light-card);
+  border: 1px solid var(--color-light-border);
+  border-radius: 16px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+  transition: border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.dark .card {
+  background: var(--color-surface-1);
+  border-color: var(--color-border-subtle);
+  box-shadow: none;
+}
+
+.card:hover {
+  border-color: #b4b4b8;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.dark .card:hover {
+  border-color: #333336;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Tag — pill, monochrome */
+.tag {
+  display: inline-flex;
+  align-items: center;
+  padding: 3px 12px;
+  border-radius: 9999px;
+  font-family: 'Overpass Mono', monospace;
+  font-size: 0.75rem;
+  line-height: 1.5;
+  background: var(--color-light-bg);
+  color: #3f3f46;
+  border: 1px solid #d4d4d8;
+}
+
+.dark .tag {
+  color: var(--color-text-secondary);
+  background: var(--color-surface-2);
+  border-color: var(--color-border);
+}
+
+/* Section divider line */
+.divider {
+  height: 1px;
+  flex: 1;
+  background: var(--color-light-border);
+}
+
+.dark .divider {
+  background: var(--color-border-subtle);
+}
+
+/* ──────────────────────────────────────────────
+   Blog content typography
+   ────────────────────────────────────────────── */
+
+.blog-content h2 {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 1.75rem;
+  font-weight: 400;
+  letter-spacing: -0.005em;
+  margin-top: 48px;
+  margin-bottom: 16px;
+}
+
+.blog-content h3 {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 1.5rem;
+  font-weight: 400;
+  margin-top: 40px;
+  margin-bottom: 12px;
+}
+
+.blog-content p {
+  font-size: 1rem;
+  line-height: 1.75;
+  color: #52525b;
+  margin-bottom: 24px;
+}
+
+.dark .blog-content p {
+  color: var(--color-text-secondary);
+}
+
+.blog-content ul,
+.blog-content ol {
+  margin-bottom: 24px;
+  padding-left: 24px;
+}
+
+.blog-content ul { list-style-type: disc; }
+.blog-content ol { list-style-type: decimal; }
+
+.blog-content li {
+  font-size: 1rem;
+  line-height: 1.75;
+  color: #52525b;
+  margin-bottom: 8px;
+}
+
+.dark .blog-content li {
+  color: var(--color-text-secondary);
+}
+
+.blog-content a {
+  color: #18181b;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-color: #a1a1aa;
+  transition: text-decoration-color 0.2s;
+}
+
+.dark .blog-content a {
+  color: #fafafa;
+  text-decoration-color: #52525b;
+}
+
+.blog-content a:hover {
+  text-decoration-color: currentColor;
+}
+
+/* Shiki code blocks */
+.blog-content .shiki {
+  background: var(--color-surface-2) !important;
+  border: 1px solid var(--color-border);
+  border-radius: 16px;
+  padding: 24px;
+  overflow-x: auto;
+  margin-bottom: 24px;
+  font-family: 'Overpass Mono', monospace;
+  font-size: 0.875rem;
+  line-height: 0.8;
+}
+
+.blog-content pre:not(.shiki) {
+  background: var(--color-surface-2);
+  border: 1px solid var(--color-border);
+  border-radius: 16px;
+  padding: 24px;
+  overflow-x: auto;
+  margin-bottom: 24px;
+  font-family: 'Overpass Mono', monospace;
+  font-size: 0.875rem;
+  line-height: 0.8;
+  color: var(--color-text-primary);
+}
+
+.blog-content pre code,
+.blog-content .shiki code {
+  font-family: inherit;
+  font-size: inherit;
+  background: none;
+  border: none;
+  padding: 0;
+  color: inherit;
+}
+
+.blog-content .shiki .line {
+  display: block;
+}
+
+/* Inline code */
+.blog-content :not(pre) > code {
+  font-family: 'Overpass Mono', monospace;
+  background: var(--color-light-bg);
+  border: 1px solid #d4d4d8;
+  padding: 2px 6px;
+  border-radius: 6px;
+  font-size: 0.8125rem;
+  color: #18181b;
+}
+
+.dark .blog-content :not(pre) > code {
+  background: var(--color-surface-2);
+  border-color: var(--color-border);
+  color: var(--color-text-primary);
+}
+
+.blog-content blockquote {
+  border-left: 2px solid #a1a1aa;
+  padding-left: 24px;
+  margin-bottom: 24px;
+  color: #71717a;
+}
+
+.dark .blog-content blockquote {
+  border-left-color: var(--color-border);
+  color: var(--color-text-tertiary);
+}
+
+.blog-content img {
+  border-radius: 16px;
+  margin: 32px 0;
+  max-width: 100%;
+}
+
+.blog-content hr {
+  border: none;
+  border-top: 1px solid #d4d4d8;
+  margin: 48px 0;
+}
+
+.dark .blog-content hr {
+  border-color: var(--color-border-subtle);
+}
