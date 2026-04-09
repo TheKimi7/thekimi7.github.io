@@ -10,7 +10,8 @@ export const posts = Object.entries(modules)
       date: attrs.date || '',
       tags: Array.isArray(attrs.tags) ? attrs.tags : [],
       excerpt: attrs.excerpt?.replace(/^["']|["']$/g, '') || '',
-      content: mod.content,
+      pages: mod.pages,
+      totalPages: mod.pages.length,
     }
   })
   .sort((a, b) => new Date(b.date) - new Date(a.date))

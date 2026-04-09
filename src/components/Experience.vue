@@ -5,7 +5,7 @@ const experiences = [
     company: 'PwC India',
     period: 'Oct 2024 - Present',
     current: true,
-    description: 'Conducting Android and mobile application pentests, web VAPT, and AI security audits across fintech and enterprise clients. Work covers the full mobile attack surface including static analysis, runtime instrumentation with Frida, SSL unpinning, smali modification, and APK repackaging. Also performs OS, network, and firewall config reviews.',
+    description: 'Conducted 100+ Android and mobile application security assessments across banking, fintech, and blockchain clients, identifying critical vulnerabilities including account takeover via session token leakage, privilege escalation, insecure data storage, hardcoded API keys, and deep link hijacking. Built custom Magisk modules to unblock assessment capability on Android 14+ devices where standard tooling failed. Performed n8n workflow security reviews and Web3 wallet integration assessments on mobile DeFi surfaces. Delivered findings with business impact analysis for both technical teams and executive stakeholders.',
     tags: ['Mobile Application VAPT', 'Android', 'iOS', 'Web Application VAPT', 'API Security', 'AI Security', 'Prompt Injection', 'Frida', 'Burp Suite', 'JADX', 'Apktool', 'MobSF', 'Magisk', 'OWASP Mobile Top 10', 'CIS Benchmarks', 'Config Reviews', 'n8n Security'],
   },
 ]
@@ -41,7 +41,7 @@ const education = [
                 <h3 class="type-h3">{{ exp.role }}</h3>
                 <span v-if="exp.current" class="w-2 h-2 rounded-full bg-zinc-900 dark:bg-white shrink-0"></span>
               </div>
-              <p class="type-sm type-mono text-zinc-500 dark:text-text-secondary mt-1">{{ exp.company }}</p>
+              <p class="type-xs type-mono text-zinc-500 dark:text-text-secondary mt-1">{{ exp.company }}</p>
             </div>
             <span class="type-mono type-xs text-zinc-400 dark:text-text-tertiary shrink-0">{{ exp.period }}</span>
           </div>
@@ -55,7 +55,7 @@ const education = [
       </div>
 
       <div class="mt-16">
-        <h3 class="type-mono type-xs uppercase tracking-widest text-zinc-400 dark:text-text-tertiary mb-4">Education</h3>
+        <h3 class="type-mono type-sm uppercase tracking-widest text-zinc-400 dark:text-text-tertiary mb-4">Education</h3>
         <div class="space-y-4">
           <div v-for="edu in education" :key="edu.degree" class="card p-6">
             <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between">

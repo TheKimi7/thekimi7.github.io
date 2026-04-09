@@ -1,8 +1,8 @@
 export const siteConfig = {
   name: 'Pranav Rajendran',
   logo: 'pranav.rajendran',
-  tagline: 'Mobile AppSec & Cybersecurity Professional',
-  subtitle: 'Securing mobile applications. Breaking things to make them stronger.',
+  tagline: 'Offensive Security | Mobile & AI',
+  subtitle: '100+ security assessments across Android, iOS, and AI-powered applications in banking, fintech, and enterprise. Finding vulnerabilities before attackers do.',
 }
 
 export const socials = [

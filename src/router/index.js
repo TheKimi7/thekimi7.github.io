@@ -10,14 +10,19 @@ const router = createRouter({
       component: Home,
     },
     {
-      path: '/blog/:slug',
+      path: '/blog/:slug/:page?',
       name: 'blog-post',
       component: () => import('@/views/BlogPost.vue'),
+    },
+    {
+      path: '/:pathMatch(.*)*',
+      name: 'not-found',
+      component: () => import('@/views/NotFound.vue'),
     },
   ],
   scrollBehavior(to, from, savedPosition) {
     if (to.hash) {
-      return { el: to.hash, behavior: 'smooth' }
+      return { el: to.hash, behavior: 'smooth', top: 80 }
     }
     if (savedPosition) {
       return savedPosition

@@ -12,9 +12,9 @@ const navLinks = [
   { label: 'About', href: '/#about' },
   { label: 'Experience', href: '/#experience' },
   { label: 'Skills', href: '/#skills' },
+  { label: 'Blog', href: '/#blog' },
   { label: 'Projects', href: '/#projects' },
   { label: 'Publications', href: '/#publications' },
-  { label: 'Blog', href: '/#blog' },
 ]
 
 const handleScroll = () => { scrolled.value = window.scrollY > 48 }

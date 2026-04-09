@@ -41,9 +41,9 @@ onUnmounted(() => {
     <div class="fade-section"><About /></div>
     <div class="fade-section"><Experience /></div>
     <div class="fade-section"><Skills /></div>
+    <div class="fade-section"><Blog /></div>
     <div class="fade-section"><Projects /></div>
     <div class="fade-section"><Publications /></div>
-    <div class="fade-section"><Blog /></div>
   </main>
   <Footer />
 </template>

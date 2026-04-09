@@ -6,7 +6,7 @@ import { posts, formatDate } from '@/data/blog.js'
   <section id="blog" class="py-28 px-6">
     <div class="max-w-[1080px] mx-auto">
       <div class="flex items-center gap-4 mb-12">
-        <span class="type-mono type-sm text-zinc-400 dark:text-text-tertiary">07</span>
+        <span class="type-mono type-sm text-zinc-400 dark:text-text-tertiary">04</span>
         <h2 class="type-h2">Blog</h2>
         <div class="divider"></div>
       </div>
