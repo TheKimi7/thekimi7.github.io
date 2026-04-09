@@ -1,6 +1,6 @@
 export const siteConfig = {
   name: 'Pranav Rajendran',
-  logo: 'pranav.rajendran',
+  logo: 'pranavrajendran.com',
   tagline: 'Offensive Security | Mobile & AI',
   subtitle: '100+ security assessments across Android, iOS, and AI-powered applications in banking, fintech, and enterprise. Finding vulnerabilities before attackers do.',
 }
