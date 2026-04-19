@@ -91,7 +91,7 @@ const submit = async () => {
       </div>
 
       <p class="type-body-lg text-zinc-600 dark:text-text-secondary mb-10 ">
-        Have an interesting idea or just want to say hi? Drop me a message below! I typically respond within a couple of days.
+        Have an interesting idea or just want to say hi? Drop me a message below!  I typically respond within a couple of days.
         <br>Alternatively, feel free to reach out directly via
         <a href="mailto:inbox@pranavrajendran.com" class="text-zinc-500 dark:text-text-tertiary hover:text-zinc-900 dark:hover:text-text-primary transition-colors">inbox@pranavrajendran.com</a>.
       </p>
