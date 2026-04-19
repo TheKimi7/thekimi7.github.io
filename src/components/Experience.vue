@@ -33,6 +33,7 @@ const education = [
         <div class="divider"></div>
       </div>
 
+      <div class="scroll-panel">
       <div class="space-y-4">
         <div v-for="(exp, i) in experiences" :key="i" class="card p-6">
           <div class="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-1 mb-4">
@@ -67,6 +68,7 @@ const education = [
             </div>
           </div>
         </div>
+      </div>
       </div>
     </div>
   </section>

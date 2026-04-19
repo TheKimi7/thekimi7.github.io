@@ -61,6 +61,7 @@ const projects = [
         <div class="divider"></div>
       </div>
 
+      <div class="scroll-panel">
     <div class="grid sm:grid-cols-2 gap-4">
       <component
         :is="project.status === 'in-progress' ? 'div' : 'a'"
@@ -100,6 +101,7 @@ const projects = [
         </div>
       </component>
     </div>
+      </div>
     </div>
   </section>
 </template>

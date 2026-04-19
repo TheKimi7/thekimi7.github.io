@@ -2,42 +2,38 @@
 
 @custom-variant dark (&:where(.dark, .dark *));
 
-/* ──────────────────────────────────────────────
-   Design Tokens — Monochrome
-   ────────────────────────────────────────────── */
+/* design tokens */
 
 @theme {
-  /* Typography */
+  /* type */
   --font-sans: 'Instrument Sans', system-ui, sans-serif;
   --font-serif: 'Instrument Serif', Georgia, serif;
   --font-mono: 'Overpass Mono', 'Menlo', monospace;
 
-  /* Accent — monochrome: black in light, white in dark */
+  /* accent */
   --color-accent: #18181b;
   --color-accent-light: #fafafa;
   --color-accent-subtle: #f4f4f5;
 
-  /* Dark surfaces */
+  /* dark surfaces */
   --color-surface-0: #09090b;
   --color-surface-1: #131316;
   --color-surface-2: #1c1c20;
   --color-border: #27272a;
   --color-border-subtle: #1e1e21;
 
-  /* Text */
+  /* text */
   --color-text-primary: #fafafa;
   --color-text-secondary: #a1a1aa;
   --color-text-tertiary: #71717a;
 
-  /* Light mode surfaces */
+  /* light surfaces */
   --color-light-bg: #ffffff;
   --color-light-card: #f4f4f5;
   --color-light-border: #d4d4d8;
 }
 
-/* ──────────────────────────────────────────────
-   Base
-   ────────────────────────────────────────────── */
+/* base */
 
 html {
   scroll-behavior: smooth;
@@ -70,9 +66,7 @@ body {
   background: #27272a;
 }
 
-/* ──────────────────────────────────────────────
-   Type Ramp
-   ────────────────────────────────────────────── */
+/* type ramp */
 
 .type-display {
   font-family: var(--font-serif);
@@ -143,9 +137,7 @@ body {
   font-family: 'Overpass Mono', 'Menlo', monospace;
 }
 
-/* ──────────────────────────────────────────────
-   Components
-   ────────────────────────────────────────────── */
+/* components */
 
 .fade-section {
   opacity: 0;
@@ -157,7 +149,7 @@ body {
   transform: translateY(0);
 }
 
-/* Card */
+/* card */
 .card {
   background: var(--color-light-card);
   border: 1px solid var(--color-light-border);
@@ -182,7 +174,7 @@ body {
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
 }
 
-/* Tag — pill, monochrome */
+/* tag */
 .tag {
   display: inline-flex;
   align-items: center;
@@ -202,7 +194,7 @@ body {
   border-color: var(--color-border);
 }
 
-/* Section divider line */
+/* divider */
 .divider {
   height: 1px;
   flex: 1;
@@ -213,9 +205,15 @@ body {
   background: var(--color-border-subtle);
 }
 
-/* ──────────────────────────────────────────────
-   Blog content typography
-   ────────────────────────────────────────────── */
+/* scroll panel — desktop only */
+@media (min-width: 768px) {
+  .scroll-panel {
+    max-height: 70vh;
+    overflow-y: auto;
+  }
+}
+
+/* blog content */
 
 .blog-content h1,
 .blog-content h2,
@@ -291,7 +289,7 @@ body {
   text-decoration-color: currentColor;
 }
 
-/* Copy button */
+/* copy button */
 .code-wrapper {
   position: relative;
 }
@@ -322,7 +320,7 @@ body {
   color: var(--color-text-primary);
 }
 
-/* Shiki dual-theme: CSS variable driven */
+/* shiki dual theme */
 .blog-content .shiki,
 .blog-content .shiki span {
   color: var(--shiki-light) !important;
@@ -384,7 +382,7 @@ body {
   display: block;
 }
 
-/* Inline code */
+/* inline code */
 .blog-content :not(pre) > code {
   font-family: 'Overpass Mono', monospace;
   background: var(--color-light-bg);
@@ -413,7 +411,7 @@ body {
   color: var(--color-text-tertiary);
 }
 
-/* Alerts (GitHub-style) */
+/* alerts */
 .blog-content .alert {
   border-left: 3px solid;
   border-radius: 8px;
@@ -452,7 +450,7 @@ body {
 .blog-content .alert-warning .alert-title   { color: #bba96e; }
 .blog-content .alert-caution .alert-title   { color: #b87c7c; }
 
-/* Tables */
+/* tables */
 .blog-content table {
   width: 100%;
   border-collapse: collapse;

@@ -43,6 +43,7 @@ const certifications = [
         <div class="divider"></div>
       </div>
 
+      <div class="scroll-panel">
       <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-16">
         <div v-for="category in skillCategories" :key="category.title" class="card p-5">
           <h3 class="type-sm font-semibold mb-4">{{ category.title }}</h3>
@@ -69,6 +70,7 @@ const certifications = [
             <div class="type-xs text-zinc-500 dark:text-text-tertiary">{{ cert.issuer }} · {{ cert.year }}</div>
           </div>
         </div>
+      </div>
       </div>
     </div>
   </section>

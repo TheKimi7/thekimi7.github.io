@@ -11,6 +11,7 @@ import { posts, formatDate } from '@/data/blog.js'
         <div class="divider"></div>
       </div>
 
+      <div class="scroll-panel">
       <div class="space-y-4">
         <router-link
           v-for="post in posts"
@@ -38,6 +39,7 @@ import { posts, formatDate } from '@/data/blog.js'
             </svg>
           </div>
         </router-link>
+      </div>
       </div>
     </div>
   </section>

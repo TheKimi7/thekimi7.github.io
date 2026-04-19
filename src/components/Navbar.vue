@@ -15,6 +15,7 @@ const navLinks = [
   { label: 'Blog', href: '/#blog' },
   { label: 'Projects', href: '/#projects' },
   { label: 'Publications', href: '/#publications' },
+  { label: 'Contact', href: '/#contact-me' },
 ]
 
 const handleScroll = () => { scrolled.value = window.scrollY > 48 }
@@ -32,7 +33,7 @@ onUnmounted(() => window.removeEventListener('scroll', handleScroll))
     ]"
   >
     <div class="max-w-[1080px] mx-auto px-6 h-16 flex items-center justify-between">
-      <a href="/" class="type-mono text-sm font-medium">
+      <a href="/#" class="type-mono text-sm font-medium">
         <span class="text-zinc-400 dark:text-text-tertiary">&gt;_</span>
         <span class="ml-1">{{ siteConfig.logo }}</span>
       </a>

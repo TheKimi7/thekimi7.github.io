@@ -85,7 +85,7 @@ watch([() => route.params.slug, () => route.params.page], () => {
           </div>
         </header>
 
-        <!-- Top pagination -->
+        <!-- top pagination -->
         <div v-if="isMultiPage" class="mb-10 flex items-center justify-between">
           <button
             @click="hasPrev && goToPage(currentPage - 1)"
@@ -122,7 +122,7 @@ watch([() => route.params.slug, () => route.params.page], () => {
 
         <div class="blog-content" v-html="pageContent"></div>
 
-        <!-- Bottom pagination -->
+        <!-- bottom pagination -->
         <div v-if="isMultiPage" class="mt-12 flex items-center justify-between border-t border-light-border dark:border-border-subtle pt-8">
           <button
             @click="hasPrev && goToPage(currentPage - 1)"

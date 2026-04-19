@@ -40,6 +40,7 @@ const publications = [
         <h2 class="type-h2">Publications</h2>
         <div class="divider"></div>
       </div>
+<div class="scroll-panel">
 <div class="space-y-4">
   <component
     :is="pub.status === 'in-progress' ? 'div' : 'a'"
@@ -67,6 +68,7 @@ const publications = [
     <p class="type-mono type-xs text-zinc-400 dark:text-text-tertiary mb-3">{{ pub.authors }}</p>
     <p class="type-sm text-zinc-500 dark:text-text-tertiary">{{ pub.description }}</p>
   </component>
+</div>
 </div>
     </div>
   </section>

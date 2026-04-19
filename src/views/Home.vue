@@ -8,6 +8,7 @@ import Skills from '@/components/Skills.vue'
 import Projects from '@/components/Projects.vue'
 import Publications from '@/components/Publications.vue'
 import Blog from '@/components/Blog.vue'
+import ContactMe from '@/components/ContactMe.vue'
 import Footer from '@/components/Footer.vue'
 
 defineProps({ isDark: Boolean })
@@ -44,6 +45,7 @@ onUnmounted(() => {
     <div class="fade-section"><Blog /></div>
     <div class="fade-section"><Projects /></div>
     <div class="fade-section"><Publications /></div>
+    <div class="fade-section"><ContactMe /></div>
   </main>
   <Footer />
 </template>
